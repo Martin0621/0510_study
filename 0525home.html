@@ -27,18 +27,17 @@
             //    time = time + 1;
             //    result.innerText = time;
             // }, 1000)
-            // 練習一 setInterval 連續中斷
-
-
+         
             let myTime = setInterval(function () {
-                console.log('hello setInterval')
+                // console.log('hello setInterval')
                 time = time + 1;
                 result.innerText = time;
                 if (time >= 3) {
                     clearInterval(mtTime);
+                    // 時間三秒時，中斷~清除
                 }
             }, 1000)
-            // 練習二 按下時 停止 stop
+           
 
 
 
