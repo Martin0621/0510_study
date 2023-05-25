@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <button type="button" id="startBtn">start</button>
+    <button type="button" id="stopBtn">stop</button>
+    <p id="result">原本的文字</p>
+
+    <script>
+       
+        // const startBtn = document.getElementById('startBtn');
+        // const stopBtn = document.getElementById('stopBtn');
+        // const result = document.getElementById('result');
+        
+        
+        let i = 0;
+        let a;
+        let b = false;
+        startBtn.addEventListener('click', startTime);
+        stopBtn.addEventListener('click', stopTime);
+
+        
+        function startTime() {
+            if (b == false) {
+                // b = true;
+               a = setInterval(X, 1000);
+            }
+        }
+        // x變數是為了連接第二段function
+        function X() {
+            // alert('hello');
+            i++;
+            result.innerText = '開始計時' + i.toString().padStart(5 ,'0');
+            // .toString().padStart(5 ,'0')顯示五位數
+        }
+
+        function stopTime() {
+            clearInterval(a);
+            // b = false;
+        }
+    </script>
+</body>
+
+</html>
